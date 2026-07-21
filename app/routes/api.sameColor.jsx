@@ -52,6 +52,10 @@ export async function loader({ request }) {
           colorSwatchMap: metafield(namespace: "custom", key: "color_swatch_map") {
             value
           }
+
+            colorSwatchMapAr: metafield(namespace: "custom", key: "color_swatch_map_ar") {
+            value
+          }
         }
       }
     }
@@ -122,6 +126,10 @@ export async function loader({ request }) {
               colorSwatchMap: metafield(namespace: "custom", key: "color_swatch_map") {
                  value
               }
+
+             colorSwatchMapAr: metafield(namespace: "custom", key: "color_swatch_map_ar") {
+            value
+          }
             }
           }
         }
@@ -156,6 +164,15 @@ export async function loader({ request }) {
       category: normalize(product.category?.value),
       colors: normalize(product.colors?.value),
       colorSwatchMap: (() => {
+        try {
+          return product.colorSwatchMapAr?.value
+            ? JSON.parse(product.colorSwatchMapAr.value)
+            : null;
+        } catch {
+          return null;
+        }
+      })(),
+      colorSwatchMapAr: (() => {
         try {
           return product.colorSwatchMap?.value
             ? JSON.parse(product.colorSwatchMap.value)

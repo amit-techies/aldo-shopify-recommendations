@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "b7cd2ae1b4215d7e0bf6ec0e622fc769"
-application_url = "https://print-replacing-drink-prototype.trycloudflare.com"
+application_url = "https://aldo-shopify-recommendations.onrender.com"
 embedded = true
 name = "recommend-model"
 
@@ -45,7 +45,7 @@ api_version = "2026-10"
   topics = [ "app/scopes_update" ]
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [ "https://aldo-shopify-recommendations.onrender.com/api/auth" ]
 
 [build]
 automatically_update_urls_on_dev = true
