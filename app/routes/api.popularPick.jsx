@@ -93,7 +93,7 @@ export async function loader({ request }) {
     const response = await admin.graphql(
       `
         query Products($cursor: String) {
-          products(first: 250, after: $cursor, sortKey: TITLE) {
+          products(first: 250, after: $cursor, sortKey: TITLE,  query: "inventory_total:>0") {
             pageInfo {
               hasNextPage
               endCursor
