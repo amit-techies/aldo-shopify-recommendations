@@ -53,4 +53,4 @@ automatically_update_urls_on_dev = true
 [app_proxy]
 url = "/api"
 prefix = "apps"
-subpath = "spapi"
+subpath = "proxy"

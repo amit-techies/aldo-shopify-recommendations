@@ -164,6 +164,6 @@ export async function loader({ request }) {
   );
 
   return Response.json({
-    products: recommendations.slice(0, 4),
+    products: recommendations.slice(0, 10),
   });
 }
