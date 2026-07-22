@@ -162,7 +162,7 @@ export async function loader({ request }) {
       brand: normalize(product.vendor),
       gender: normalize(product.gender?.value),
       category: normalize(product.category?.value),
-      colors: normalize(product.colors?.value),
+      colors: product.colors?.value,
       colorSwatchMap: (() => {
         try {
           return product.colorSwatchMapAr?.value
