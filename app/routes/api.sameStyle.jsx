@@ -238,6 +238,6 @@ export async function loader({ request }) {
   }
 
   return Response.json({
-    products: recommendations.slice(0, 10),
+    products: recommendations,
   });
 }
